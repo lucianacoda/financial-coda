@@ -208,7 +208,6 @@ __marimo__/
 
 
 # Specific to this project
-*.pkl
 *.csv
 /notebooks/data/
 /.idea
