@@ -41,6 +41,10 @@ FEATURES_MODELO = [
     'PAY_AMT1', 'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6'
 ]
 
+# TÉCNICA DE ANONIMIZAÇÃO: Supressão de Quase-Identificadores
+# Aplicamos a supressão de atributos na interface para limitar o risco
+# de inferência implícita. O formulário solicita apenas dados essenciais
+# para a finalidade da análise, reduzindo a exposição de dados sensíveis.
 FEATURES_TELA = {
     'LIMIT_BAL': 'Limite de Crédito Disponível (R$)',
     'AGE': 'Idade do Cliente (Anos)',

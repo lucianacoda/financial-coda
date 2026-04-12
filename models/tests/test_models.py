@@ -35,10 +35,11 @@ def ambiente_teste():
     modelo = joblib.load(CAMINHO_MODELO)
     df = pd.read_csv(CAMINHO_DADOS)
 
-    # Padronização e Limpeza
+    # Padronização e Limpeza conforme diretrizes de anonimização
     if 'default.payment.next.month' in df.columns:
         df = df.rename(columns={'default.payment.next.month': 'target'})
 
+    # Garantindo que dados suprimidos no treino também sejam removidos no teste
     if 'ID' in df.columns:
         df = df.drop(columns=['ID'])
 
